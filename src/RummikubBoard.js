@@ -10,7 +10,6 @@ import Backend from 'react-dnd-html5-backend'
 import PullTileButton from './components/PullTileButton'
 import EndTurnButton from './components/EndTurnButton'
 import Rules from './components/Rules'
-import logo from './static/logo.svg'
 import Gameover from './components/Gameover'
 import Timer from './components/Timer'
 
