@@ -66,7 +66,7 @@ code {
 
 .op-avatar-active {
   border-radius: 150px;
-  width: 120px;
+  width: 180px;
   text-align: center;
   animation: glowing 5000ms infinite;
 }
@@ -74,7 +74,7 @@ code {
 .avatar > p {
   margin-top: 3px;
   margin-bottom: 0px;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: bold;
   color: white;
   text-shadow: 2px 2px 3px rgba(0,0,0,0.8);
