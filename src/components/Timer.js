@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 
 
 export default function Timer({playerID, PullTile, isCurrentPlayer}) {
-  const [counter, setCounter] = useState(120)
+  const [counter, setCounter] = useState(180)
    
   useEffect(() => {
     if(isCurrentPlayer) {
