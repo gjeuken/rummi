@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import RummikubClient from './RummikubClient'
 import Lobby from './components/Lobby'
-import Home from './components/Home'
+// import Home from './components/Home'
 
 const App = () => {
     const [playerName, setPlayerName] = useState(localStorage.getItem('playerName') || 'Visitor')
