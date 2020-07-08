@@ -59,7 +59,6 @@ const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
         if (value.name) {
           opp.push(
             <span key={value.id} className={value.id === parseInt(ctx.currentPlayer) ? 'avatar op-avatar-active' : 'avatar'}>
-              <p>PLAYER {value.id + 1}:</p>
               {value.id === parseInt(ctx.currentPlayer) ? <p>{value.name}</p> : <p>{value.name}</p>}
             </span>
           )
@@ -103,12 +102,6 @@ const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
                 </div>
                 {<Rules {...{show, setShow}} />}
               </Col>
-              <Col id='opponent-info' md={6}>
-                {opponents}
-              </Col>
-              <Col id='end-turn' md={3}>
-                {isCurrentPlayer && <EndTurnButton FinishTurn={moves.FinishTurn}/>}
-              </Col>
             </Row>
             <Row md={12}>
               <Container id='main-board' fluid>
@@ -116,10 +109,10 @@ const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
               </Container>
             </Row>
             <Row id='bottom-row'>
+              <Col id='self-info' md={2}>
 		      <div id='opponent-info' md={6}>
 				{opponents}
 		      </div>
-              <Col id='self-info' md={2}>
                 <p>{isCurrentPlayer && 'YOUR TURN'}</p>
                 {isCurrentPlayer && <Timer {...{playerID, PullTile: moves.PullTile, isCurrentPlayer}}/>}
               </Col>
