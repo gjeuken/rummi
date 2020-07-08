@@ -94,7 +94,7 @@ const Home = () => {
               </div>
               <div className="col-7 play-button" id="gameview-detail">
                 <h1>It's Your Turn: Join the Klub</h1>
-                <p>It's really no surprise that Rummikub is so popular - it has all the elements that make a great game: it's easy to learn and fast moving, it's different every time it's played, it combines luck and strategy, and it changes quickly so every player has a chance to win until the very end!</p>
+                <p>It's really no surprise that Rummi is so popular - it has all the elements that make a great game: it's easy to learn and fast moving, it's different every time it's played, it combines luck and strategy, and it changes quickly so every player has a chance to win until the very end!</p>
                 <Link to="/lobby">
                   <button type="button" className="btn btn-primary">PLAY NOW</button>
                 </Link>

@@ -14,7 +14,7 @@ export default function Rules({
         <Modal.Header closeButton>
           <Modal.Title>
           </Modal.Title>
-          <h3>Welcome to Rummikub Rules</h3>
+          <h3>Welcome to Rummi Rules</h3>
         </Modal.Header>
 
         <Modal.Body id='rules-body'>
