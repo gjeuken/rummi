@@ -88,7 +88,7 @@ const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
   } else {
     return (
       <DndProvider backend={Backend}>
-        <div>
+        <div className={isCurrentPlayer ? 'active-back' : 'inactive-back'}>
           <Container id='master' fluid>
             <Row id='top-row'>
               <Col id='logo-area' md={3}>

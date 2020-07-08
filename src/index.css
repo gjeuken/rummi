@@ -13,9 +13,17 @@ code {
 }
 
 #master {
-  background-color: #157CB0;
+  /* background-color: #157CB0; */
   width: 100vw;
   overflow-y: auto;
+}
+
+.active-back {
+  background-color: #3F681C;
+}
+
+.inactive-back {
+  background-color: #157CB0;
 }
 
 #top-row {
