@@ -136,7 +136,8 @@ code {
 
 #rack {
   background-color: #966f33;
-  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  /* background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png"); */
+  background: radial-gradient(circle, rgba(151,111,52,1) 0%, rgba(75,55,26,1) 107%);
   border: 6px solid #6e5000;
   -webkit-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.6);
   -moz-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.6);
