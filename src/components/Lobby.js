@@ -115,7 +115,7 @@ export default function Lobby({
                 credentials,
                 leaveGame,
                 setGameID,
-                setPlayerID,:
+                setPlayerID,
                 setCredentials,
               }}
             />
