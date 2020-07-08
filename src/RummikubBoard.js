@@ -98,7 +98,7 @@ const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
                   <Button className='small-btn' variant="dark" size="sm" onClick={() => setShow(true)}>
                     How to Play
                   </Button>
-                  <LinkContainer to='/lobby'>
+                  <LinkContainer to='/'>
                     <Button className='small-btn' variant="dark" size="sm" >
                       Exit Game
                     </Button>
@@ -129,9 +129,6 @@ const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
                 </div>
               </Col>
               <Col id='rack-container' md={8}>
-                <Row id='rack-title'>
-                  <h5>YOUR TILES</h5>
-                </Row>
                 <Row id='rack-row'>
                   <Rack {...{playerRack: G.players[playerID], MoveTile: handleMove}}/>
                 </Row>
@@ -143,6 +140,9 @@ const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
                     <Button className='turn-btn' variant="warning" onClick={handleReset}>RESET BOARD</Button>
                   </React.Fragment>
                 }
+				<div id='end-turn' md={2}>
+				    {isCurrentPlayer && <EndTurnButton FinishTurn={moves.FinishTurn}/>}
+				</div>
               </Col>
             </Row>
           </Container>

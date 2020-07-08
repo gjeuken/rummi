@@ -82,11 +82,12 @@ code {
 #end-turn {
   margin-top: 30px;
   text-align: right;
-  padding-right: 40px;
+  /* padding-right: 40px; */
 }
 
 #end-turn button {
   font-weight: 700;
+  background-color: #4caf50;
 }
 
 #main-board {
