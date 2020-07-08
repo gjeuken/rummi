@@ -5,6 +5,7 @@ const EndTurnButton = ({FinishTurn}) => {
 
   const handleClick = () => {
       FinishTurn()
+      fetch(`${process.env.REACT_APP_GAME_SERVER}games/rummikub`)
     }
   return (
       <Button className='turn-btn' variant="dark" onClick={handleClick}>
