@@ -37,8 +37,9 @@ code {
 #opponent-info {
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 .avatar > img {
@@ -50,10 +51,10 @@ code {
 }
 
 @keyframes glowing {
-  0% { box-shadow: 0 0 -10px #FFFFFF; }
+  0% { box-shadow: 0 0 5px #FFFFFF; }
   40% { box-shadow: 0 0 20px #FFFFFF; }
   60% { box-shadow: 0 0 20px #FFFFFF; }
-  100% { box-shadow: 0 0 -10px #FFFFFF; }
+  100% { box-shadow: 0 0 5px #FFFFFF; }
 }
 
 .me-avatar-active {

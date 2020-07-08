@@ -9,7 +9,6 @@ import Rack from './components/Rack'
 import Backend from 'react-dnd-html5-backend'
 import PullTileButton from './components/PullTileButton'
 import EndTurnButton from './components/EndTurnButton'
-import avatar from './static/av.png'
 import Rules from './components/Rules'
 import logo from './static/logo.svg'
 import Gameover from './components/Gameover'
@@ -49,7 +48,7 @@ const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
   }, [gameMetadata, gameID, playerID])
   
   useEffect(() => {
-    if (gameID && playerID && (opponents.length + 1) >= gameMetadata.length) {
+    if (gameID && playerID && (opponents.length) >= gameMetadata.length) {
       clearInterval(stopFetching.current)
     }
   }, [opponents, gameMetadata, gameID, playerID])
@@ -58,12 +57,11 @@ const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
     const renderOpponents = () => {
       const opp = []
       for (const [, value] of opponentsData.entries()) {
-        if (playerID !== value.id.toString() && value.name) {
+        if (value.name) {
           opp.push(
             <span key={value.id} className={value.id === parseInt(ctx.currentPlayer) ? 'avatar op-avatar-active' : 'avatar'}>
               <p>PLAYER {value.id + 1}:</p>
-              {value.id === parseInt(ctx.currentPlayer) ? <p>{value.name}'s Turn</p> : <p>{value.name}</p>}
-              <img src={avatar} alt="player avatar" />
+              {value.id === parseInt(ctx.currentPlayer) ? <p>{value.name}</p> : <p>{value.name}</p>}
             </span>
           )
         }
@@ -92,7 +90,6 @@ const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
           <Container id='master' fluid>
             <Row id='top-row'>
               <Col id='logo-area' md={3}>
-                <img src={logo} alt='game logo' width="275" />
                 <div>
                 <div className='admin-btn-container'>
                   <Button className='small-btn' variant="dark" size="sm" onClick={() => setShow(true)}>
@@ -120,13 +117,12 @@ const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
               </Container>
             </Row>
             <Row id='bottom-row'>
+		      <div id='opponent-info' md={6}>
+				{opponents}
+		      </div>
               <Col id='self-info' md={2}>
                 <p>{isCurrentPlayer && 'YOUR TURN'}</p>
                 {isCurrentPlayer && <Timer {...{playerID, PullTile: moves.PullTile, isCurrentPlayer}}/>}
-                <p>PLAYER {parseInt(playerID) + 1}</p>
-                <div className={isCurrentPlayer ? 'avatar me-avatar-active' : 'avatar'}>
-                  <img src={avatar} alt="player avatar" />
-                </div>
               </Col>
               <Col id='rack-container' md={8}>
                 <Row id='rack-row'>
