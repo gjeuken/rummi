@@ -31,7 +31,7 @@ const GameoverButton = () => {
 		
 		const handleClick = () => {
 				handleLeave()
-				history.push('/lobby')
+				history.push('/')
 		}
 		
 		return (
