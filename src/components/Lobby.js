@@ -101,7 +101,7 @@ export default function Lobby({
           <div className="row">
             <img src={jface} alt="joker face" id="lob-title-img" />
             <div id="lob-title">
-              <h3>Welcome to the Lobby, Let's Get You in a Game...</h3>
+              <h3>Welcome! Let's play Rummi.</h3>
             </div>
           </div>
           <FormName {...{ playerName, setPlayerName }} />
@@ -115,7 +115,7 @@ export default function Lobby({
                 credentials,
                 leaveGame,
                 setGameID,
-                setPlayerID,
+                setPlayerID,:
                 setCredentials,
               }}
             />
