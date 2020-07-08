@@ -98,7 +98,8 @@ export function isRun(combination) {
   for (const tile of copy) {
     if (tile === 'JK') {
       if (copy[0] === 'JK')
-        prev = 1
+        // prev = 1
+        prev = copy[1].substring(1) - 1
       else
         prev++
 
