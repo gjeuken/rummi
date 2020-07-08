@@ -10,15 +10,17 @@ import jface from '../static/jface.png'
 export default function Lobby({
                                   playerName,
                                   setPlayerName,
-                                  gameID,
+                                  gameID_back,
                                   setGameID,
-                                  playerID,
+                                  playerID_back,
                                   setPlayerID,
                                   credentials,
                                   setCredentials,
                               }) {
     const [games, setGames] = useState([])
     const [numPlayers, setNumPlayers] = useState('2')
+    const gameID = localStorage.getItem('gameID')
+    const playerID = localStorage.getItem('playerID')
 
 
     const loadGames = () => {

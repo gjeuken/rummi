@@ -1,5 +1,6 @@
 import React from 'react'
-import { Modal, Button } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
+import GameoverButton from './GameoverButton'
 
 export default function Gameover({
                                   showGameover,
@@ -39,9 +40,7 @@ export default function Gameover({
         </Modal.Body>
 
         <Modal.Footer>
-          <Button id='rules-btn' variant="primary" onClick={handleClose}>
-            Return to board
-          </Button>
+		  <GameoverButton />
         </Modal.Footer>
 
       </Modal>
