@@ -14,8 +14,11 @@ const App = () => {
     return (
         <Router>
             <Switch>
-                <Route path="/lobby">
-                    <Lobby {...{
+                <Route path="/game">
+                    <RummikubClient {...{playerID, gameID, credentials}}/>
+                </Route>
+                <Route exact path="/">
+				    <Lobby {...{
                         playerName,
                         setPlayerName,
                         gameID,
@@ -25,12 +28,6 @@ const App = () => {
                         credentials,
                         setCredentials,
                     }}/>
-                </Route>
-                <Route path="/game">
-                    <RummikubClient {...{playerID, gameID, credentials}}/>
-                </Route>
-                <Route exact path="/">
-                    <Home />
                 </Route>
             </Switch>
 

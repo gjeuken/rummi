@@ -84,7 +84,7 @@ const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
   }
 
   if (!gameID && !playerID) {
-    return <Redirect to="/lobby"/>
+    return <Redirect to="/"/>
   } else {
     return (
       <DndProvider backend={Backend}>
