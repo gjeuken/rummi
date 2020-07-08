@@ -14,7 +14,7 @@ export default function GameList({
     const pID = freeSlot && `${freeSlot.id}`
     return (
       <ListGroup.Item key={ind} id='game-list'>
-        {g.players.map((p) => (p.name ? `[${p.name}] ` : "[Available]"))}
+        {g.players.map((p) => (p.name ? `[${p.name}] ` : "[Available] "))}
         {!playerID && (!gameID || freeSlot === undefined) ? (
           <Button onClick={() => joinGame(gID, pID)}>Join</Button>
         ) : null}
