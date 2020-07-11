@@ -13,7 +13,7 @@ export default function Timer({playerID, PullTile, isCurrentPlayer}) {
 
   return (
     <div>
-      <p>Time Remaining: {counter}</p>
+      <p>Tempo restante: {counter}</p>
     </div>
   )
 }

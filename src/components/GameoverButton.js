@@ -36,7 +36,7 @@ const GameoverButton = () => {
 		
 		return (
 				<Button onClick={handleClick}>
-				Exit game
+				Sair do jogo
 				</Button>
 		);
 }

@@ -15,9 +15,9 @@ export default function Gameover({
   
   const showName = () => {
     if (gameOver.winner === playerID) {
-      return 'You are the winner!'
+      return 'Você ganhou!'
     } else {
-      return 'Winner is ' + opponentsData.find(elem => elem.id === parseInt(gameOver.winner)).name
+      return 'O ganhador é ' + opponentsData.find(elem => elem.id === parseInt(gameOver.winner)).name
     }
   }
 
@@ -28,7 +28,7 @@ export default function Gameover({
         <Modal.Header closeButton>
           <Modal.Title>
           </Modal.Title>
-          <h3>Gameover</h3>
+          <h3>Fim do jogo</h3>
         </Modal.Header>
 
         <Modal.Body id='rules-body'>

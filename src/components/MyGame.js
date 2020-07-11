@@ -26,12 +26,12 @@ export default function MyGame({
 
   return (
     <div>
-      <h2 id='lobby-subtitle'>- CURRENT GAME -</h2>
+      <h2 id='lobby-subtitle'>- JOGO ATUAL -</h2>
       <ul id='current-game-info'>
-        <li>Player Name: {playerName || "none"}</li>
-        <li>Game ID: {gameID || "none"}</li>
-        <li>Player ID: {playerID || "none"}</li>
-        <li>Credentials: {credentials ? "Ready" : "Missing"}</li>
+        <li>Nome do jogador: {playerName || "none"}</li>
+        <li>ID do jogo: {gameID || "none"}</li>
+        <li>ID do jogador: {playerID || "none"}</li>
+        <li>Credenciais: {credentials ? "Pronto" : "Faltando"}</li>
       </ul>
       <div id='current-game-buttons'>
         <Button
@@ -40,7 +40,7 @@ export default function MyGame({
           variant={"primary"}
           onClick={() => history.push("/game")}
         >
-          Play Now
+          Jogar
         </Button>
         <Button
           id='leave-game-btn'
@@ -48,7 +48,7 @@ export default function MyGame({
           onClick={handleLeave}
           disabled={!gameID || !playerID || !credentials}
         >
-          Leave Game
+          Sair do jogo
         </Button>
       </div>
     </div>

@@ -92,7 +92,7 @@ const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
                 <div>
                 <div className='admin-btn-container'>
                   <Button className='small-btn' variant="dark" size="sm" onClick={() => setShow(true)}>
-                    How to Play
+                    Regras
                   </Button>
 				  <GameoverButton />
                   </div>
@@ -110,7 +110,7 @@ const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
 		      <div id='opponent-info' md={6}>
 				{opponents}
 		      </div>
-                <p>{isCurrentPlayer && 'YOUR TURN'}</p>
+                <p>{isCurrentPlayer && 'SUA VEZ'}</p>
                 {isCurrentPlayer && <Timer {...{playerID, PullTile: moves.PullTile, isCurrentPlayer}}/>}
               </Col>
               <Col id='rack-container' md={8}>
@@ -122,7 +122,7 @@ const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
                 {isCurrentPlayer &&
                   <React.Fragment>
                     <PullTileButton {...{playerID, PullTile: moves.PullTile}}/>
-                    <Button className='turn-btn' variant="warning" onClick={handleReset}>RESET BOARD</Button>
+                    <Button className='turn-btn' variant="warning" onClick={handleReset}>REFAZER MESA</Button>
                   </React.Fragment>
                 }
 				<div id='end-turn' md={2}>
