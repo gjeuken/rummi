@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { DndProvider } from 'react-dnd'
 import { Button, Container, Row, Col } from 'react-bootstrap'
 import { Redirect } from 'react-router-dom'
-import { LinkContainer } from 'react-router-bootstrap'
+// import { LinkContainer } from 'react-router-bootstrap'
 
 import MainBoard from './components/MainBoard'
 import Rack from './components/Rack'
@@ -12,6 +12,7 @@ import EndTurnButton from './components/EndTurnButton'
 import Rules from './components/Rules'
 import Gameover from './components/Gameover'
 import Timer from './components/Timer'
+import GameoverButton from './components/GameoverButton'
 
 
 const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
@@ -93,11 +94,7 @@ const RummikubBoard = ({G, ctx, moves, playerID, gameID, gameMetadata}) => {
                   <Button className='small-btn' variant="dark" size="sm" onClick={() => setShow(true)}>
                     How to Play
                   </Button>
-                  <LinkContainer to='/'>
-                    <Button className='small-btn' variant="dark" size="sm" >
-                      Exit Game
-                    </Button>
-                  </LinkContainer>
+				  <GameoverButton />
                   </div>
                 </div>
                 {<Rules {...{show, setShow}} />}

@@ -186,6 +186,16 @@ code {
   font-weight: 700;
 }
 
+.admin-btn-container button {
+  min-width: 80px;
+  font-size: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: 700;
+  background-color: black;
+  border-color: black;
+}
+
 #rules-body {
   font-size: 14px;
 }
@@ -193,7 +203,7 @@ code {
 .modal-header {
   text-align: center;
   font-weight: bold;
-  margin-left: 30px;
+  margin-left: 30p;
 }
 
 .modal-body {
