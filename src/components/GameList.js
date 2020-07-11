@@ -12,7 +12,7 @@ export default function GameList({
   const history = useHistory()
   const handleJoin = (gID, pID) => {
 		joinGame(gID, pID);
-		setTimeout(() => history.push('/game'), 500);
+		setTimeout(() => history.push('/game'), 100);
   }
 
   const renderGame = (g, ind) => {

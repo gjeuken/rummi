@@ -93,7 +93,7 @@ export default function Lobby({
 
         const interval = setInterval(() => {
             loadGames()
-        }, 2000)
+        }, 500)
         return () => clearInterval(interval)
     }, [])
 
