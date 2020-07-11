@@ -6,7 +6,7 @@ export default function FormName({ playerName, setPlayerName }) {
   return (
     <Form onSubmit={(e) => e.preventDefault()}>
       <Form.Group id="form-name">
-        <Form.Label id='name-label'>First, tell us your name:</Form.Label>
+        <Form.Label id='name-label'>Seu nome:</Form.Label>
           <Form.Control
             id='name-input'
             type="text"

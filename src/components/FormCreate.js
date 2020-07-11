@@ -5,11 +5,11 @@ import '../lobby.css'
 export default function FormCreate({ createGame, setNumPlayers }) {
   return (
     <Form onSubmit={(e) => e.preventDefault()} >
-      <h2 id='lobby-subtitle'>- FOR A NEW GAME -</h2>
+      <h2 id='lobby-subtitle'>- CRIAR UM JOGO NOVO -</h2>
       <Form.Group id="create-room">
         {/* <Form.Label>Create a rummi game</Form.Label> */}
         <Form.Row>
-          <Form.Label id='player-label'>How Many Players?</Form.Label>
+          <Form.Label id='player-label'>Quantos jogadores?</Form.Label>
           <Form.Control
             id='player-input'
             as="select"
@@ -21,7 +21,7 @@ export default function FormCreate({ createGame, setNumPlayers }) {
           </Form.Control>
         </Form.Row>
         <Button variant="primary" onClick={createGame}>
-          Create
+          Criar
         </Button>
       </Form.Group>
     </Form>

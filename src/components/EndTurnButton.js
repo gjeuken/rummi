@@ -9,7 +9,7 @@ const EndTurnButton = ({FinishTurn}) => {
     }
   return (
       <Button className='turn-btn' variant="dark" onClick={handleClick}>
-      END TURN
+      PASSAR VEZ
       </Button>
   );
 }

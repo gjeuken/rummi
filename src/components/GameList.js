@@ -15,9 +15,9 @@ export default function GameList({
     const pID = freeSlot && `${freeSlot.id}`
     return (
       <ListGroup.Item key={ind} id='game-list'>
-        {g.players.map((p) => (p.name ? `[${p.name}] ` : "[Available] "))}
+        {g.players.map((p) => (p.name ? `[${p.name}] ` : "[- disponível -] "))}
         {!playerID && (!gameID || freeSlot === undefined) ? (
-          <Button onClick={() => joinGame(gID, pID)}>Join</Button>
+          <Button onClick={() => joinGame(gID, pID)}>Entrar</Button>
         ) : null}
       </ListGroup.Item>
     )
@@ -25,7 +25,7 @@ export default function GameList({
 
   return (
     <div>
-      <h2 id='lobby-subtitle'>- ALL GAMES -</h2>
+      <h2 id='lobby-subtitle'>- JOGOS CRIADOS -</h2>
       <div id='game-list-items'>
         <ListGroup>{games.map((g, ind) => renderGame(g, ind))}</ListGroup>
       </div>
