@@ -1,6 +1,5 @@
 import React from "react"
 import { ListGroup, Button } from "react-bootstrap"
-import { useHistory } from "react-router-dom"
 
 export default function GameList({
   games,
@@ -8,12 +7,6 @@ export default function GameList({
   gameID,
   joinGame,
 }) {
-  
-  const history = useHistory()
-  const handleJoin = (gID, pID) => {
-		joinGame(gID, pID);
-		setTimeout(() => history.push('/game'), 300);
-  }
 
   const renderGame = (g, ind) => {
     const [gID, players] = [g.gameID, g.players]
@@ -24,7 +17,7 @@ export default function GameList({
       <ListGroup.Item key={ind} id='game-list'>
         {g.players.map((p) => (p.name ? `[${p.name}] ` : "[Available] "))}
         {!playerID && (!gameID || freeSlot === undefined) ? (
-          <Button onClick={() => handleJoin(gID, pID)}>Join</Button>
+          <Button onClick={() => joinGame(gID, pID)}>Join</Button>
         ) : null}
       </ListGroup.Item>
     )
